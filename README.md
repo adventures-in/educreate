@@ -1,16 +1,70 @@
 # educreate
 
-A new Flutter project.
+Education that scales where everyone can be both producer and consumer.
 
-## Getting Started
+- Link to public resources
+- Review, rate and categorise resources
+- Create questions and challenges and build Learning Pathways around Topics
+- Undertake Adventures to develop skills
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Commonly Used Commands 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
+flutter pub run build_runner build
+remotedev --port 8000
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Using the Redux RemoteDevTools (RDT) 
+
+Configure the [remote_dev_tools](https://pub.dev/packages/redux_remote_devtools) package: 
+- find the IP address of the computer 
+- edit `main.dart` to use the correct IP (use one of the strings in `utilities/mock.dart` or make a new one)
+
+Run the [remotedev server](https://github.com/zalmoxisus/remotedev-server)
+
+```
+remotedev --port 8000
+```
+
+Open a web page with url:
+
+```
+http://localhost:8000
+```
+
+## Code gen with built_value 
+
+After making changes to [built_value](https://github.com/google/built_value.dart) classes run the builder to generate the new code:
+
+```
+flutter pub run build_runner build
+```
+
+## Tests 
+
+### Unit and Widget Tests 
+
+```
+flutter test
+```
+
+### Integration Tests 
+
+To start the driver run:
+
+```
+flutter drive --target=test_driver/app.dart
+```
+
+If the automatically selected device is not the one you want, run: 
+
+```
+flutter devices
+```
+
+and copy the relevant ID and then run:
+
+```
+flutter drive --target=test_driver/app.dart -d <device_id>
+```
