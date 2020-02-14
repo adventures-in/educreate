@@ -38,3 +38,8 @@ app.*.symbols
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+##################################
+
+# mocks with potentially identifying info
+lib/utils/ips.dart

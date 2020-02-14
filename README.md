@@ -19,7 +19,8 @@ remotedev --port 8000
 
 Configure the [remote_dev_tools](https://pub.dev/packages/redux_remote_devtools) package: 
 - find the IP address of the computer 
-- edit `main.dart` to use the correct IP (use one of the strings in `utilities/mock.dart` or make a new one)
+- create `utilities/ips.dart` and add your IP as a string (eg. `String home18 = '192.168.0.18:8000';`)
+- edit `main.dart` to use the correct IP
 
 Run the [remotedev server](https://github.com/zalmoxisus/remotedev-server)
 
